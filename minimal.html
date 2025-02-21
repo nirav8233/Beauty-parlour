@@ -271,7 +271,7 @@ footer {
           // Construct the WhatsApp URL
           const whatsappNumber = "+919408241906"; // Replace with the recipient's phone number (including the + and country code)
           const message = "Query about this <br>"; // Optional message
-          const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message + " " + encodedImageURL)}`; // Includes both message and image URL
+          const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message + " " +ImageURL)}`; // Includes both message and image URL
         
           // Open the WhatsApp link in a new tab/window
           window.open(whatsappURL, '_blank');
