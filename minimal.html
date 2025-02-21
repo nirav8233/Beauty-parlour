@@ -15,23 +15,23 @@
             width: auto; /* Make header full width */
             overflow: hidden; /* Hide any image overflow */
             position: fixed; /* Keep header fixed */
-            top: 0;
-            left: 0;
+            top: 100%;
+            left: 100%;
             z-index: 100; /* Ensure header is above other content */
           }
         
           header img {
-            width: 1550px; /* Make image fill header width */
-            height: 200px; /* Maintain aspect ratio */
+            width: 500%;
             display: flex; /* Prevent small space below image */
             object-fit: cover; /* or contain, depending on desired effect */
           }
+          
         
             /* Optional: Add some styling to the header content */
             header .header-content {
-                position: absolute; /* Position content over image */
-                top: 50%;
-                left: 50%;
+                position: fixed; /* Position content over image */
+                top: 100%;
+                left: 100%;
                 transform: translate(-50%, -50%); /* Center content */
                 color: white; /* Example text color */
                 text-align: center;
@@ -210,6 +210,9 @@ footer {
         </script>
     </head>
 <body>
+    <img src="https://github.com/nirav8233/Beauty-parlour/blob/main/T3.png?raw=true" alt="Landscape Image" width="1550" height="250">
+    <div class="header-content">
+    </div>
 
     <div class="parallax"></div>
 
@@ -226,7 +229,7 @@ footer {
             <li><a href="https://nirav8233.github.io/Beauty-parlour/#about">About</a></li>
             <li><a href="https://nirav8233.github.io/Beauty-parlour/#contact">Contact us</a></li>
         </ul>
-    </nav><br><br><br><br>
+    </nav><br>
 
     <section id="gallery">
 
