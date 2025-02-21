@@ -5,153 +5,226 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimal Mehendi</title> 
     <style>
-        body {
-            background: #ffb5d7;
-            margin: 0;
-            font-family: sans-serif;
-        }
+       body{
+    background: #ffb5d7;
+}
+ /* Header */
+ header {
+    background-image: url('https://github.com/nirav8233/Beauty-parlour/blob/main/T3.png?raw=true'); /* Replace with your header image */
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    padding: 100px 0; /* Increased padding */
+    text-align: center;
+    font-size: larger;
+    font-family: Cambria;
+    body {
+        font-family: sans-serif; /* Choose a suitable font */
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0; /* Light background color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
 
-        header {
-            background-image: url('https://github.com/nirav8233/Beauty-parlour/blob/main/T3.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            color: rgb(0, 0, 0);
-            padding: 100px 0;
-            text-align: center;
-            font-size: larger;
-            font-family: Cambria;
-            position: fixed; /* Keep header fixed */
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100; /* Ensure header is above other content */
-        }
+    .container {
+        background-color: #fff; /* White background for the banner */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 800px; /* Adjust as needed */
+        width: 90%; /* Responsive width */
+    }
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
+    .logo {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 
-        header p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
+    .subtitle {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
 
-        nav {
-            font-size: small;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            text-align: center;
-            position: sticky; /* Sticky navigation */
-            top: 200px; /* Adjust as needed */
-            z-index: 100; /* Ensure it's above other content */
-        }
+    .categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        gap: 20px;
+    }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+    .category {
+        font-size: 1em;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer; /* Indicate clickable categories */
+        transition: background-color 0.3s; /* Smooth hover effect */
+    }
 
-        nav li {
-            display: inline;
-            margin: 0 15px;
-        }
+    .category:hover {
+        background-color: #f5f5f5;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-            padding: 15px 25px; /* Add padding to nav items */
-            margin: 0 10px;
-            border-radius: 5px;
-        }
 
-        nav a:hover {
-            color: #ffb5d7;
-            background-color: #000000; /* Add background on hover */
-            color: white; /* Text color change */
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .categories {
+            flex-direction: column; /* Stack categories vertically */
+            align-items: center;
         }
+    }
 
-        .gallery-description {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #555;
-            font-style: italic;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 1rem;
-            background-color: rgb(255, 255, 255);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 1s ease-in-out;
-            margin-top: 200px; /* Add top margin below header */
-        }
+}
 
-        .gallery {
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Navigation */
+nav {
+    font-size: medium;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 10px;
+    text-align: center;
+    position: sticky; /* Sticky navigation */
+    top: 0;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+nav a {
+    padding: 15px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the navigation links */
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffb5d7; /* Gold on hover */
+}
+
+
+/* Gallery Description */
+.gallery-description {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #555;
+    font-style: italic;
+    animation: fadeInUp 1s ease-in-out;
+}
+/* ... (Existing CSS) ... */
+
+.gallery-description {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #555; /* Slightly darker text */
+    font-style: italic;
+    font-size: 1.2rem; /* Slightly larger font size */
+    line-height: 1.8; /* Improved line height for readability */
+    max-width: 800px; /* Limit width for better readability on large screens */
+    margin-left: auto; /* Center the description */
+    margin-right: auto;
+    padding: 1rem; /* Add some padding */
+    background-color: rgb(255, 255, 255); /* Subtle background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    animation: fadeInUp 1s ease-in-out; /* Keep the animation */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-description {
+        font-size: 1.1rem; /* Slightly smaller font on smaller screens */
+        padding: 0.8rem;
+        max-width: 90%; /* Take up more width on smaller screens */
+    }
+}
+
+/* ... (Rest of CSS) ... */
+.gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger images */
+            gap: 30px; /* Increased gap */
             padding: 20px;
         }
 
         .gallery img {
             width: 100%;
-            height: 700px;
+            height: 700px; /* Fixed height for consistent aspect ratio */
             object-fit: cover;
             border-radius: 8px;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More defined shadow */
+            cursor: pointer; /* Indicate clickability */
         }
 
         .gallery img:hover {
-            transform: scale(1.08);
+            transform: scale(1.08); /* More pronounced zoom */
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 3rem;
+    animation: fadeInUp 1s ease-in-out;
+}
 
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
+.pagination a {
+    color: #333;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd; /* Light border */
+    margin: 0 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 90%;
-        }
+.pagination a.active {
+    background-color: #d4af37; /* Gold for active page */
+    color: white;
+    border-color: #d4af37;
+}
 
-        .modal-content:hover {
-            cursor: default;
-        }
+.pagination a:hover:not(.active) {
+    background-color: #eee;
+}
 
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .close:hover {
-            color: #bbb;
-        }
+/* Footer Styles */
 footer {
     background-color: #333; /* Darker footer */
     color: white;
@@ -188,8 +261,6 @@ footer {
 .footer-links a:hover {
     color: #d4af37; /* Gold on hover */
 }
-
-
     </style>
 
 /* ... (Responsive adjustments same as previous example) ... */
