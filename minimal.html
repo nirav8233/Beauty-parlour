@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,30 +12,30 @@
         }
 
         header {
-            background-image: url('https://github.com/nirav8233/Beauty-parlour/blob/main/T3.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            color: rgb(0, 0, 0);
-            padding: 100px 0;
-            text-align: center;
-            font-size: larger;
-            font-family: Cambria;
+            width: auto; /* Make header full width */
+            overflow: hidden; /* Hide any image overflow */
             position: fixed; /* Keep header fixed */
             top: 0;
             left: 0;
-            width: 100%;
             z-index: 100; /* Ensure header is above other content */
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
+          }
+        
+          header img {
+            width: 1550px; /* Make image fill header width */
+            height: 200px; /* Maintain aspect ratio */
+            display: flex; /* Prevent small space below image */
+            object-fit: cover; /* or contain, depending on desired effect */
+          }
+        
+            /* Optional: Add some styling to the header content */
+            header .header-content {
+                position: absolute; /* Position content over image */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* Center content */
+                color: white; /* Example text color */
+                text-align: center;
+            }
 
         nav {
             font-size: small;
@@ -213,6 +214,10 @@ footer {
     <div class="parallax"></div>
 
     <header>
+        <img src="https://github.com/nirav8233/Beauty-parlour/blob/main/T3.png?raw=true" alt="Landscape Image" width="50" height="50">
+        <div class="header-content">
+        </div>
+    
     </header>
     <nav>
         <ul>
@@ -221,7 +226,7 @@ footer {
             <li><a href="https://nirav8233.github.io/Beauty-parlour/#about">About</a></li>
             <li><a href="https://nirav8233.github.io/Beauty-parlour/#contact">Contact us</a></li>
         </ul>
-    </nav><br><br>
+    </nav><br><br><br><br>
 
     <section id="gallery">
 
