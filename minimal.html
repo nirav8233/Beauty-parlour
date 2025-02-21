@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimal Mehendi</title> 
     <style>
+               /* Styles for larger screens (desktop) */
+@media (min-width: 992px) { /* Adjust the breakpoint as needed */
+  body {
+    font-size: 16px; /* Example: Larger font size */
+  }
+
+  nav {
+    /* Desktop-specific navigation styles */
+  }
+
+  .container {
+    max-width: 1200px; /* Example: Set a maximum width for content */
+    margin: 0 auto; /* Center the content */
+  }
+}
+
+/* Styles for smaller screens (mobile) */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    /* Mobile-specific styles */
+}
         body {
             background: #ffb5d7;
             margin: 0;
@@ -188,28 +208,6 @@ footer {
 .footer-links a:hover {
     color: #d4af37; /* Gold on hover */
 }
-        /* Styles for larger screens (desktop) */
-@media (min-width: 992px) { /* Adjust the breakpoint as needed */
-  body {
-    font-size: 16px; /* Example: Larger font size */
-  }
-
-  nav {
-    /* Desktop-specific navigation styles */
-  }
-
-  .container {
-    max-width: 1200px; /* Example: Set a maximum width for content */
-    margin: 0 auto; /* Center the content */
-  }
-}
-
-/* Styles for smaller screens (mobile) */
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
-    /* Mobile-specific styles */
-}
-
-
     </style>
     <script>
         function shareImage() {
