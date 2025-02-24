@@ -178,9 +178,12 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
         .service-grid {
-            display: flex;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 50px;
+            display: flex;
+            justify-content: space-around; /* Example: distribute space evenly */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+          
         }
         .service-item {
             padding: 20px;
@@ -188,7 +191,9 @@
             border-radius: 8px;
             text-align: center; /* Center content within grid items */
             transition: transform 0.3s, box-shadow 0.3s;
-                        flex-direction: row;
+            width: 30%; /* Example: each service takes up 30% width */
+            margin-bottom: 20px; /* Add some spacing */
+            box-sizing: border-box; /* Include padding and border in width */
         }
         .service-item img{
             width: 200px;  /* Fixed width */
